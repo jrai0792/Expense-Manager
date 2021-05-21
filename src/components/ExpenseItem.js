@@ -1,5 +1,19 @@
+import './ExpenseItem.css';
+
 function ExpenseItem() {
-  return <h2>Expense Item here</h2>
+
+  const expenseDate = new Date(2021, 2, 28);
+  const expenseTitle = 'Shopping';
+  const expenseAmount = 240;
+  return (
+    <div className="expense-item">
+      <div>{expenseDate.toISOString()}</div>
+      <div className="expense-item__description">
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">&#8377;{expenseAmount}</div>
+      </div>
+    </div>
+  )
 }
 
 export default ExpenseItem
